@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<!-- Meta -->
+		<meta charset="utf-8" /> <!-- encoding -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Microsoft Edge browser support -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- responsive -->
+
+		<!-- Page title -->
+		<title>GrandPy Bot</title>
+
+		<!-- Page style -->
+		<link rel="stylesheet" href="..\static\css\style.css">
+		<!-- Icon library for social logos on footer -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="..\static\img\icon.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href=""..\static\img\icon.png"" /><![endif]-->
+
+		<!-- Related js scripts -->
+		<script src="../static/js/init_map.js"></script>
+		<script src="../static/js/dialogue.js"></script>
+		<script src="../static/js/ajax.js"></script>
+
+	</head>
+
+	<body>
+		<div id="container">
+			<!-- Header -->
+			<header class="row">
+				<h1>GRANDPY BOT</h1>
+				<h2>Le papy robot qui parle de géo</h2>
+			</header>
+
+			<div class="row">
+				<h3>Envie d'en savoir plus sur un lieu ? Le papy bot te trouveras l'adresse et te raconteras une histoire sur ce lieu.</h3>
+			</div>
+		
+			<!-- Webpage main content -->
+			<section>
+				<!-- user textbox -->
+				<div class="row" id="question_area">
+					<form class= "col-lg-offset-2 col-lg-8">
+						<input type="textarea" name="query" id="query" placeholder="Salut GrandPy ! Est-ce que tu connais l'adresse de la BNF ?"><figure id="papy_face"><img id="papy_face_pict" onclick="javascript:user_request_analyse();" src="../static/img/gpb.png" alt="Papy_face"></figure>
+					</form>
+				</div>
+
+				<!-- dialogue and map display -->
+				<div>
+					<!-- dialogue display -->
+					<div class="row">
+						<div class="col-lg-offset-2 col-lg-8" id="dialogue"></div>
+					</div>
+					<!-- map display -->
+					<div class="row">
+						<div class="col-lg-offset-2 col-lg-8" id="map"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer class="row">
+				<p id="footer"> Tytgat Loan <a href="https://github.com/orionewton/P7" class="fa fa-github"></a></p>
+			</footer>
+
+		</div>
+		
+	<!-- Googlemap initialisation -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ gmap_api_key }}&callback=initMap"></script>
+
+	<!-- Add event listener on form -->
+	<script src="../static/js/init_page.js"></script>
+	</body>
+</html>
