@@ -18,6 +18,3 @@
 
 # Local run:
 1. use `python run.py` on your terminal.
-
-# Note
-GrandPy Bot app has been deployed (and hosted) on Heroku at https://loan-grandpybot.herokuapp.com/
